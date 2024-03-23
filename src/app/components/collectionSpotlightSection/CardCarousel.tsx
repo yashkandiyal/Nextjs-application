@@ -9,7 +9,7 @@ const CardCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCardsCount, setVisibleCardsCount] = useState(3);
   const { theme } = useMyTheme();
-  console.log(theme);
+  
   const arrowColor = theme === "light" ? "text-black" : "text-white";
   const disabledButtonColor =
     theme === "light" ? "text-gray-400" : "text-gray-600";
