@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root.light {
+    background-color: #F7F7F8; /* Change this to the light background color */
+}
+
+:root {
+    background-color: #292b32; /* Default dark background color */
+}
+
+
+
