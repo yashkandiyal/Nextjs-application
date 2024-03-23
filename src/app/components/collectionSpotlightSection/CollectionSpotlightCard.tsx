@@ -1,4 +1,3 @@
-
 import { useMyTheme } from "../context/ThemeContext";
 
 interface Player {
@@ -20,7 +19,7 @@ const CollectionSpotlightCard: React.FC<{ player: Player }> = ({ player }) => {
   const bgColor = theme === "light" ? "bg-[#F7F7F8]" : "bg-[#3B3E47]";
 
   return (
-    <div className={` p-4 shadow-md h-[36.5rem] ${bgColor}`}>
+    <div className={` p-4 shadow-md h-[36.5rem] mb-10 ${bgColor}`}>
       <img
         src={player.Image}
         alt=""
@@ -35,7 +34,7 @@ const CollectionSpotlightCard: React.FC<{ player: Player }> = ({ player }) => {
       </p>
       <p className={`text-sm mb-2 text-center ${textColor}`}>{player.Venue}</p>
       <div className="flex flex-col items-center justify-center">
-        <button className="bg-[#000000] hover:bg-[black] text-white text-[1rem] py-[0.5rem] px-6 rounded ">
+        <button className="bg-[#000000] hover:bg-[black] text-white text-[1rem] py-[0.5rem] px-6 rounded mb-10 ">
           {player.ButtonContent}
         </button>
       </div>
