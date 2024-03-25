@@ -9,7 +9,7 @@ const CardCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCardsCount, setVisibleCardsCount] = useState(3);
   const { theme } = useMyTheme();
-  
+
   const arrowColor = theme === "light" ? "text-black" : "text-white";
   const disabledButtonColor =
     theme === "light" ? "text-gray-400" : "text-gray-600";
@@ -56,7 +56,9 @@ const CardCarousel = () => {
           type="button"
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.2 }}>
-          <ArrowBackIosNew />
+          <ArrowBackIosNew
+            className={`${currentIndex === 0 && disabledButtonColor}`}
+          />
         </motion.button>
         {visibleCards.map((player, index) => (
           <motion.div
@@ -79,7 +81,12 @@ const CardCarousel = () => {
           type="button"
           whileHover={{ scale: 1.2 }}
           transition={{ duration: 0.3 }}>
-          <ArrowForwardIos />
+          <ArrowForwardIos
+            className={`${
+              currentIndex >= PlayerData2.length - visibleCardsCount &&
+              disabledButtonColor
+            }`}
+          />
         </motion.button>
       </div>
     </div>
