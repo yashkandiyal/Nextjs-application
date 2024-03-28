@@ -1,15 +1,16 @@
 
 import { useMyTheme } from "../context/ThemeContext";
+import Image, { StaticImageData } from "next/image";
 
 type SportsCardProps = {
-  Image: string;
+  Images: StaticImageData;
   TeamName: string;
   TotalEvents: number;
   Sport: string;
 };
 
 const SportsCard: React.FC<SportsCardProps> = ({
-  Image,
+  Images,
   TeamName,
   TotalEvents,
   Sport,
@@ -27,7 +28,7 @@ const SportsCard: React.FC<SportsCardProps> = ({
           id="part1"
           className="flex flex-col items-center justify-center mt-3">
           <div className="w-[14.5625rem] h-[23.081875rem] bg-slate-200">
-            <img src={Image} alt="" className="h-full w-full" />
+            <Image src={Images} alt="" className="h-full w-full" />
           </div>
 
           <div className="flex flex-col justify-start items-start">

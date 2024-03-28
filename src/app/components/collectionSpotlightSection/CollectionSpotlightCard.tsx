@@ -1,7 +1,8 @@
 import { useMyTheme } from "../context/ThemeContext";
+import Image, { StaticImageData } from "next/image";
 
 interface Player {
-  Image: string;
+  Image: StaticImageData;
 
   TeamName: string;
   Timings: {
@@ -20,7 +21,7 @@ const CollectionSpotlightCard: React.FC<{ player: Player }> = ({ player }) => {
 
   return (
     <div className={` p-4 shadow-md h-[36.5rem] mb-10 ${bgColor}`}>
-      <img
+      <Image
         src={player.Image}
         alt=""
         className="w-[14.125rem] h-[25.125rem] mb-4 "

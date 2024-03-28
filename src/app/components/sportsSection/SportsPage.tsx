@@ -38,7 +38,7 @@ const SportsPage = () => {
           {PlayerData.map((player) => (
             <SportsCard
               key={player.Id}
-              Image={player.Image}
+              Images={player.Image}
               TeamName={player.TeamName}
               TotalEvents={player.TotalEvents}
               Sport={player.Sport}

@@ -1,6 +1,7 @@
 import React from "react";
 import { useMyTheme } from "../context/ThemeContext";
-
+import Image, { StaticImageData } from "next/image";
+import AdImage from '../Images/Ad.jpg'
 const AdvertisementCard = () => {
   const { theme } = useMyTheme();
   const textColor = theme === "light" ? "text-black" : "text-white";
@@ -14,15 +15,15 @@ const AdvertisementCard = () => {
           id="part1"
           className="flex flex-col items-center justify-center mt-2">
           <div className="w-[14.5625rem] h-[11.5409375rem] relative">
-            <img
-              src="https://via.placeholder.com/150"
+            <Image
+              src={AdImage}
               alt=""
               className="h-full w-full bg-slate-200"
             />
             <h2 className={`absolute top-0 right-0 bg-black text-white px-2`}>
               Ad
             </h2>
-           
+
             <div className={`${textColor} my-5`}>
               <div className="text-[1.45rem] font-semibold text-center">
                 <div>
