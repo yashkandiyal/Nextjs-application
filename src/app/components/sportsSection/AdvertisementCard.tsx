@@ -1,7 +1,7 @@
 import React from "react";
 import { useMyTheme } from "../context/ThemeContext";
 import Image, { StaticImageData } from "next/image";
-import AdImage from '../Images/Ad.jpg'
+import AdImage from "../Images/Ad.jpg";
 const AdvertisementCard = () => {
   const { theme } = useMyTheme();
   const textColor = theme === "light" ? "text-black" : "text-white";

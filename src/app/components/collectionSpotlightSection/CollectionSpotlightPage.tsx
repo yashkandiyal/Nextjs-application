@@ -9,9 +9,9 @@ const CollectionSpotlightPage = () => {
 
   return (
     <>
-      <div className={`h-[150vh]  ${textColor}`}>
+      <div className={`h-[150vh]  md:mx-20  ${textColor}`}>
         <div className="flex flex-col justify-center items-center mt-11">
-          <div className={`md:w-[85rem] md:h-[60.375rem] ${bgColor}`}>
+          <div className={`w-full  md:h-[60.375rem] ${bgColor}`}>
             <h1 className="text-center text-2xl md:text-5xl font-bold mt-20">
               Collection Spotlight
             </h1>

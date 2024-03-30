@@ -24,7 +24,7 @@ const CollectionSpotlightCard: React.FC<{ player: Player }> = ({ player }) => {
       <Image
         src={player.Image}
         alt=""
-        className="w-[14.125rem] h-[25.125rem] mb-4 "
+        className="w-full h-[25.125rem] mb-4 "
       />
 
       <p className={`text-lg mb-2 text-center ${textColor} font-semibold`}>
